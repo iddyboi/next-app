@@ -13,12 +13,19 @@ interface InventoryListItems {
 }
 type Action =
   | { type: 'ADD'; payload: Inventory }
-  | { type: 'DELETE' }
+  | { type: 'DELETE'; payload: Inventory }
   | { type: 'EDIT' };
 const invertoryReducer = (state: InventoryListItems, action: Action) => {
   switch (action.type) {
     case 'ADD':
       return { ...state, inventories: [...state.inventories, action.payload] };
+    case 'DELETE':
+      return {
+        ...state,
+        inventories: state.inventories.filter(
+          (inventory) => inventory.description !== action.payload.description
+        ),
+      };
     default:
       return state;
   }
