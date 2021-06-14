@@ -1,0 +1,16 @@
+{
+  "name": "Idris Taiwo",
+  "jobDescription": "Front End Developer",
+  "dob": "05/03/1989",
+  "location": "london",
+  "tech": [
+    "Javascript",
+    "HTML",
+    "SCSS",
+    "styled-components",
+    "react/nextjs",
+    "typescript",
+    "docker"
+  ],
+  "info": "I am a Javascript developer by trade who knows how build responsive web apps using React on top of Nextjs. I primarily focus on front end technology but i can get my hands dirty in back end technology such as nodejs using the express framework"
+}

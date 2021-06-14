@@ -1,12 +1,18 @@
-import styled from 'styled-components';
-import { Container } from '../styles/utility-styles';
-import { Title } from '../styles/fonts';
+import Link from "next/link";
+import styled from "styled-components";
+import { Container } from "../styles/utility-styles";
+import { Title } from "../styles/fonts";
 
 const NavLinks = styled.ul`
   display: flex;
   font-size: ${({ theme }) => theme.fonts.md};
-  li {
+  a {
     margin-right: 10px;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primary};
+    &:hover {
+      color: #ee0606;
+    }
   }
 `;
 const HeaderContainer = styled(Container)`
@@ -18,12 +24,12 @@ function Layout() {
   return (
     <>
       <HeaderContainer>
-        <Title fontSize='2rem'>Idris Web Blogs</Title>
+        <Title fontSize="2rem">Idris Web Blogs</Title>
         <NavLinks>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>Blogs</li>
-          <li>News</li>
+          <Link href="/">Home</Link>
+          <Link href="/">Projects</Link>
+          <Link href="/state">State</Link>
+          <Link href="/invoice">Invoices</Link>
         </NavLinks>
       </HeaderContainer>
     </>

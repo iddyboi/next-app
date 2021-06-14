@@ -1,11 +1,13 @@
-import { Container } from '../styles/utility-styles';
+import Head from "next/head";
+import Profile from "../components/Profile/Profile";
 
 export default function Home() {
   return (
     <>
-      <Container>
-        <p>home</p>
-      </Container>
+      <Head>
+        <title>Home Page</title>
+      </Head>
+      <Profile />
     </>
   );
 }

@@ -1,6 +1,6 @@
-import React, { ChangeEvent, FormEvent, useReducer, useState } from 'react';
-import styled from 'styled-components';
-import InventoryList from './InventoryList';
+import React, { ChangeEvent, FormEvent, useReducer, useState } from "react";
+import styled from "styled-components";
+import InventoryList from "./InventoryList";
 
 interface Inventory {
   name: string;
@@ -12,14 +12,14 @@ interface InventoryListItems {
   inventories: Inventory[];
 }
 type Action =
-  | { type: 'ADD'; payload: Inventory }
-  | { type: 'DELETE'; payload: Inventory }
-  | { type: 'EDIT' };
+  | { type: "ADD"; payload: Inventory }
+  | { type: "DELETE"; payload: Inventory }
+  | { type: "EDIT" };
 const invertoryReducer = (state: InventoryListItems, action: Action) => {
   switch (action.type) {
-    case 'ADD':
+    case "ADD":
       return { ...state, inventories: [...state.inventories, action.payload] };
-    case 'DELETE':
+    case "DELETE":
       return {
         ...state,
         inventories: state.inventories.filter(
@@ -33,7 +33,7 @@ const invertoryReducer = (state: InventoryListItems, action: Action) => {
 
 const initalstate: InventoryListItems = {
   inventories: [
-    { name: 'Cream', quantity: 10, description: 'Vitamin E cream' },
+    { name: "Cream", quantity: 10, description: "Vitamin E cream" },
   ],
 };
 
@@ -43,9 +43,9 @@ const AddInventory = () => {
     initalstate
   );
   const [inventoryForm, setInventoryForm] = useState<Inventory>({
-    name: '',
+    name: "",
     quantity: 0,
-    description: '',
+    description: "",
   });
   const formHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setInventoryForm((prevState) => {
@@ -55,43 +55,48 @@ const AddInventory = () => {
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
-    inventoriesDispatch({ type: 'ADD', payload: inventoryForm });
+    inventoriesDispatch({ type: "ADD", payload: inventoryForm });
   };
 
   return (
     <>
       <Form onSubmit={submitHandler}>
         <FormControl>
-          <label htmlFor='inventoryName'>Inventory Name</label>
+          <label htmlFor="inventoryName">Inventory Name</label>
           <input
-            type='text'
-            id='inventoryName'
+            type="text"
+            id="inventoryName"
             value={inventoryForm.name}
-            name='name'
+            name="name"
             onChange={formHandler}
           />
         </FormControl>
         <FormControl>
-          <label htmlFor='Quantity'>Quantity</label>
+          <label htmlFor="Quantity">Quantity</label>
           <input
-            type='number'
-            id='Quantity'
+            type="number"
+            id="Quantity"
             value={inventoryForm.quantity}
-            name='quantity'
+            name="quantity"
             onChange={formHandler}
           />
         </FormControl>
         <FormControl>
-          <label htmlFor='description'>Inventory Description</label>
+          <label htmlFor="description">Inventory Description</label>
           <input
-            type='text'
-            id='description'
+            type="text"
+            id="description"
             value={inventoryForm.description}
-            name='description'
+            name="description"
             onChange={formHandler}
           />
         </FormControl>
-        <button type='submit'>add inventory</button>
+        <button
+          type="submit"
+          disabled={!inventoryForm.name && inventoryForm.quantity < 0}
+        >
+          add inventory
+        </button>
       </Form>
       <InventoryList inventories={inventoriesstate} />
     </>
@@ -108,6 +113,11 @@ const Form = styled.form`
     border: none;
     text-transform: capitalize;
     cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
+    &:disabled {
+      color: ${({ theme }) => theme.colors.grey};
+    }
   }
 `;
 const FormControl = styled.div`

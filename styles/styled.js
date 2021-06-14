@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 html {
@@ -8,8 +8,8 @@ html {
 
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #001514;
-    color: #fff;
+    background-color: #fff;
+    color: #001514;
   }
   *{
     margin: 0;
@@ -21,11 +21,13 @@ html {
 
 export const theme = {
   colors: {
-    primary: '#0070f3',
-    white: '#fff',
+    primary: "#022650",
+    white: "#fff",
+    grey: "#a5a5a5",
+    orange: "#f25c54",
   },
   fonts: {
-    sm: '1.5rem',
-    md: '2rem',
+    sm: "1.5rem",
+    md: "2rem",
   },
 };

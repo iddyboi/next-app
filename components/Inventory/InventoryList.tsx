@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const InventoryList = ({ inventories }) => {
   return (
@@ -6,7 +6,7 @@ const InventoryList = ({ inventories }) => {
       {inventories.inventories.map(({ name, description, quantity }) => (
         <Item key={description}>
           <div>
-            {' '}
+            {" "}
             <h3>{name}</h3>
             <p>{description}</p>
           </div>
@@ -24,8 +24,8 @@ const List = styled.div`
   margin-top: 50px;
 `;
 const Item = styled.div`
-  background-color: #fff;
-  color: #000;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   margin-top: 10px;
   padding: 0.5rem;
   display: flex;
