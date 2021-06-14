@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h1`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "3rem")};
   color: ${({ theme }) => theme.colors.primary};
-  margin-bottom: 2rem;
+  margin-bottom: ${(props) => (props.margin ? " 2rem" : null)};
 `;
 export const Subtitle = styled.h2`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "1rem")};

@@ -27,7 +27,7 @@ function Layout() {
         <Title fontSize="2rem">Idris Web Blogs</Title>
         <NavLinks>
           <Link href="/">Home</Link>
-          <Link href="/">Projects</Link>
+          <Link href="/projects">Projects</Link>
           <Link href="/state">State</Link>
           <Link href="/invoice">Invoices</Link>
         </NavLinks>
