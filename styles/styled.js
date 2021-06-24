@@ -17,6 +17,9 @@ html {
     box-sizing: border-box; 
     list-style: none;
   }
+  img{
+    max-width: 100%;
+  }
 `;
 
 export const theme = {

@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "3rem")};
+  font-size: 2.4rem;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: ${(props) => (props.margin ? " 2rem" : null)};
+  @media (min-width: 768px) {
+    font-size: ${(props) => (props.fontSize ? props.fontSize : "3rem")};
+  }
 `;
 export const Subtitle = styled.h2`
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "1rem")};
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    font-size: ${(props) => (props.fontSize ? props.fontSize : "1rem")};
+  }
 `;
 
 export const Lead = styled.p`
