@@ -2,8 +2,8 @@ import { FunctionComponent, useState, ChangeEvent } from "react";
 
 interface IProps {
   text: string;
-  onDelete: (id: string) => void;
-  onEdit: (id: string, newTodo: string) => void;
+  onDelete?: (id: string) => void;
+  onEdit?: (id: string, newTodo: string) => void;
 }
 
 const TodoItem: FunctionComponent<IProps> = ({ text, onDelete, onEdit }) => {

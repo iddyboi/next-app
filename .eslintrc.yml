@@ -1,13 +1,14 @@
 env:
   browser: true
   es2021: true
+  jest: true
 extends:
-  - 'eslint:recommended'
-  - 'plugin:react/recommended'
-  - 'plugin:@typescript-eslint/recommended'
-  - 'google'
-  - 'prettier'
-parser: '@typescript-eslint/parser'
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "google"
+  - "prettier"
+parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -15,5 +16,5 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-  - '@typescript-eslint'
+  - "@typescript-eslint"
 rules: {}
