@@ -5,7 +5,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "../styles/styled";
 import TodoContextProvider from "../hooks/store";
-import Layout from "../components/Layout";
+import Layout from "../src/components/Layout";
 
 const queryClient = new QueryClient();
 

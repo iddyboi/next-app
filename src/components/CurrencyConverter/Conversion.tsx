@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { FunctionComponent } from "react";
 import styled from "styled-components";
-import { currencySymbol } from "../../helpers/currencyFunctions";
+import { currencySymbol } from "../../../helpers/currencyFunctions";
 
 interface IProps {
   amount: number;

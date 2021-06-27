@@ -29,4 +29,5 @@ module.exports = {
       statements: 0,
     },
   },
+  moduleFileExtensions: ["ts", "tsx", "js"],
 };

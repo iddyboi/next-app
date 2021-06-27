@@ -2,10 +2,10 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import {
   currencySymbol,
   currencyConversion,
-} from "../../helpers/currencyFunctions";
+} from "../../../helpers/currencyFunctions";
 import styled from "styled-components";
 import Conversion from "./Conversion";
-import { useConveter } from "../../hooks/custom/useConveter";
+import { useConveter } from "../../../hooks/custom/useConveter";
 
 function CurrencyForm() {
   const {

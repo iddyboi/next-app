@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { Container } from "../styles/utility-styles";
-import { Subtitle, Title } from "../styles/fonts";
+import { Container } from "../../styles/utility-styles";
+import { Subtitle, Title } from "../../styles/fonts";
 import React from "react";
 
 const NavLinks = styled.ul`
@@ -47,7 +47,7 @@ function Layout() {
           </li>
           <li>
             {" "}
-            <Link href="/sign-up">Sign Up</Link>
+            <Link href="/login">Login</Link>
           </li>
         </NavLinks>
       </HeaderContainer>
