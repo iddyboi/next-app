@@ -10,7 +10,9 @@
     "test:watch": "jest --watch",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@types/react-query": "^1.2.9",
