@@ -28,6 +28,7 @@ export const theme = {
     white: "#fff",
     grey: "#a5a5a5",
     orange: "#f25c54",
+    yellow: "#ffcb47",
   },
   fonts: {
     sm: "1.5rem",
