@@ -3,6 +3,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import { ThemeProvider } from "styled-components";
+
+import { Provider } from "react-redux";
+
+import { store } from "../redux/index";
 import { GlobalStyle, theme } from "../styles/styled";
 import TodoContextProvider from "../hooks/store";
 import Layout from "../src/components/Layout";
@@ -19,8 +23,10 @@ export default function App({ Component, pageProps }) {
       <TodoContextProvider>
         <QueryClientProvider client={queryClient}>
           <ThemeProvider theme={theme}>
-            <Layout />
-            <Component {...pageProps} />
+            <Provider store={store}>
+              <Layout />
+              <Component {...pageProps} />
+            </Provider>
           </ThemeProvider>
           <ReactQueryDevtools />
         </QueryClientProvider>
